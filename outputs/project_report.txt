@@ -1,0 +1,35 @@
+
+EEG Motor Imagery Decoding with Classical Machine Learning
+
+1. Objective
+The goal of this project was to test whether two different motor imagery states can be distinguished from EEG brain signals using a classical brain-computer interface pipeline.
+
+2. Data
+The project used real multichannel EEG recordings from the EEGBCI dataset.
+The analysis was performed in a subject-specific setup using one subject and three runs.
+
+3. Preprocessing
+The raw EEG signals were segmented into epochs using event markers.
+A band-pass filter of 8–30 Hz was applied to isolate the frequency range relevant to motor imagery.
+The time window 0.5–2.5 s after the event was used for classification.
+
+4. Methods
+The task was reduced to binary classification between two motor imagery classes (T1 vs T2).
+Common Spatial Patterns (CSP) were used for feature extraction.
+Three classifiers were compared:
+- LDA
+- SVM
+- Logistic Regression
+
+5. Evaluation
+Performance was evaluated using repeated stratified cross-validation.
+Additional validation included permutation testing to confirm that the result was not random.
+
+6. Results
+All three models achieved high performance.
+The best result was obtained with CSP + LDA, with mean accuracy around 97.1%.
+SVM and Logistic Regression performed nearly identically, with only a very small difference from LDA.
+
+7. Conclusion
+The results show that subject-specific motor imagery states can be reliably decoded from EEG data using a classical BCI pipeline.
+This project demonstrates a practical baseline for EEG signal decoding and serves as a foundation for future work in brain-computer interfaces and neurotechnology.

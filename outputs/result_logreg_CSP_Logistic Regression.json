@@ -1,0 +1,28 @@
+{
+    "model": "CSP + Logistic Regression",
+    "subject": 1,
+    "runs": [
+        6,
+        10,
+        14
+    ],
+    "channels": 64,
+    "time_window_sec": [
+        0.5,
+        2.5
+    ],
+    "frequency_band_hz": [
+        8,
+        30
+    ],
+    "classes": "T1 vs T2",
+    "epochs_after_binary_filter": 45,
+    "cv": "RepeatedStratifiedKFold",
+    "n_splits": 5,
+    "n_repeats": 10,
+    "random_state": 42,
+    "mean_accuracy": 0.9688888888888889,
+    "std_accuracy": 0.058962218495207115,
+    "min_accuracy": 0.7777777777777778,
+    "max_accuracy": 1.0
+}
