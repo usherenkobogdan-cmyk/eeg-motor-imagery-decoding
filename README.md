@@ -1,5 +1,5 @@
-Title
-EEG Motor Imagery Decoding
+**Title
+**EEG Motor Imagery Decoding
 
 Short description
 
