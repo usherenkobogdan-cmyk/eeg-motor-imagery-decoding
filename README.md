@@ -28,3 +28,26 @@ outputs/model_accuracy_boxplot.png — boxplot
 Why it matters
 
 This project is a first step toward brain-computer interfaces, neural signal decoding, and neurotechnology systems that can interpret human intent from brain activity.
+
+## Stage 3: Multi-subject validation
+
+After building the initial subject-specific baseline and comparing several classical classifiers, I extended the experiment to multiple subjects.
+
+The goal of this stage was to test whether the CSP-based motor imagery decoding pipeline works beyond a single participant.
+
+For each subject, the same pipeline was used:
+
+- EEGBCI data loading
+- 8–30 Hz band-pass filtering
+- 0.5–2.5 s post-event time window
+- binary classification between T1 and T2
+- CSP feature extraction
+- comparison of LDA, SVM, and Logistic Regression
+- repeated stratified cross-validation
+
+The results are saved in:
+
+- `outputs/multi_subject_model_comparison.csv`
+- `outputs/multi_subject_summary.csv`
+- `outputs/multi_subject_accuracy_by_subject.png`
+- `outputs/multi_subject_model_summary.png`
